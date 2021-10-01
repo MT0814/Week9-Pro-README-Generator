@@ -59,7 +59,7 @@ const questions = [
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license'
     },
  
@@ -67,7 +67,7 @@ const questions = [
     type: 'input',
     message: "What is your GitHub username? (No @ needed)",
     name: 'username',
-    default: 'connietran-dev',
+    default: 'MT0814',
     validate: function (answer) {
         if (answer.length < 1) {
             return console.log("A valid GitHub username is required.");
@@ -103,17 +103,17 @@ async function init() {
     try {
 
         // Prompt Inquirer questions
-        const userResponses = await inquirer.prompt(questions);
-        console.log("Your responses: ", userResponses);
+        const data = await inquirer.prompt(questions);
+        console.log("Your responses: ", data);
         console.log("Thank you for your responses! Fetching your GitHub data next...");
     
         // Call GitHub api for user info
-        const userInfo = await api.getUser(userResponses);
+        const userInfo = await api.getUser(data);
         console.log("Your GitHub user info: ", userInfo);
     
         // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
         console.log("Generating your README next...")
-        const markdown = generateMarkdown(userResponses, userInfo);
+        const markdown = generateMarkdown(data, userInfo);
         console.log(markdown);
     
         // Write markdown to file
