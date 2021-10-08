@@ -57,7 +57,7 @@ Uses the [Inquirer package](https://www.npmjs.com/package/inquirer), axios, and 
 - Input your information about this project and GitHub and then it will generate a README.md file.
 - Readme file demo with the video link emabded
 
-[![Readme file demo](./assets/readme-video.gif)](https://watch.screencastify.com/v/hZocAjkM0ph7wI6QmGny)
+[![Readme file demo](./assets/readme-video.gif)](https://watch.screencastify.com/v/pc5KSX1mh6xOZriYHHwC)
 
 ## License
 
