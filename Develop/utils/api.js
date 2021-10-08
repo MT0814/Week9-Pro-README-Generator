@@ -1,11 +1,11 @@
 const axios = require('axios');
 
 const api = {
-  async getUser(userResponses) {
+  async getUser(data) {
     try { let response = await axios
         
       // Sample URL: https://api.github.com/users/mt0814
-        .get(`https://api.github.com/users/${userResponses.username}`);
+        .get(`https://api.github.com/users/${data.username}`);
         return response.data;
 
       } catch (error) {

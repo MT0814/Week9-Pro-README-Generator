@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const { title } = require('process');
+
 
 
 // Internal modules
@@ -10,7 +10,7 @@ const api = require('./utils/api.js');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = [ 
+const questions = [
     {
         type: 'input',
         message: "What is the title of your project?",
@@ -40,12 +40,12 @@ const questions = [
         message: "Describe the installation process if any:",
         name: 'installation'
     },
-    { 
-    type: 'input',
-    message: "What is this project usage for?",
-    name: 'usage'
+    {
+        type: 'input',
+        message: "What is this project usage for?",
+        name: 'usage'
     },
-   
+
     {
         type: 'input',
         message: "Who are the contributors of this projects?",
@@ -59,27 +59,27 @@ const questions = [
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense', 'Zlib'],
         name: 'license'
     },
- 
+
     {
-    type: 'input',
-    message: "What is your GitHub username? (No @ needed)",
-    name: 'username',
-    default: 'MT0814',
-    validate: function (answer) {
-        if (answer.length < 1) {
-            return console.log("A valid GitHub username is required.");
+        type: 'input',
+        message: "What is your GitHub username? (No @ needed)",
+        name: 'username',
+        default: 'MT0814',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("A valid GitHub username is required.");
+            }
+            return true;
         }
-        return true;
-    }
-},
-{
-    type: 'input',
-    name: 'email',
-    message: 'What is your email address?',
-},
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    },
 
 ];
 
@@ -89,9 +89,9 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
-          return console.log(err);
+            return console.log(err);
         }
-      
+
         console.log("Success! Your README.md file has been generated")
     });
 }
@@ -106,16 +106,16 @@ async function init() {
         const data = await inquirer.prompt(questions);
         console.log("Your responses: ", data);
         console.log("Thank you for your responses! Fetching your GitHub data next...");
-    
+
         // Call GitHub api for user info
         const userInfo = await api.getUser(data);
         console.log("Your GitHub user info: ", userInfo);
-    
+
         // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
         console.log("Generating your README next...")
         const markdown = generateMarkdown(data, userInfo);
         console.log(markdown);
-    
+
         // Write markdown to file
         await writeFileAsync('ExampleREADME.md', markdown);
 
