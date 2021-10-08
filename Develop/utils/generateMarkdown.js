@@ -60,7 +60,6 @@ ${renderLicenseBadge(data.license)}
 ${renderLicenseLink(data.license)} 
 * [Contributing](#contributing) 
 * [Tests](#tests) 
-* [Username](#username) 
 * [Questions](#questions)
 
 ## Description
