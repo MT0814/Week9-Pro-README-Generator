@@ -58,7 +58,7 @@ Uses the [Inquirer package](https://www.npmjs.com/package/inquirer), axios, and 
 - Readme file demo with the video link emabded
 - Please click gif file for the full version of video
 
-[![Readme file demo](./assets/readme-video.gif)](https://drive.google.com/file/d/1qCbyxHFyZwjaTVLW84EwQcrsp5_eR3VH/viewC)
+[![Readme file demo](./assets/readme-video.gif)](https://drive.google.com/file/d/1qCbyxHFyZwjaTVLW84EwQcrsp5_eR3VH/view)
 
 Or [Click me for the video](https://drive.google.com/file/d/1qCbyxHFyZwjaTVLW84EwQcrsp5_eR3VH/view)
 
