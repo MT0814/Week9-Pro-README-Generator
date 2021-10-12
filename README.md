@@ -60,7 +60,7 @@ Uses the [Inquirer package](https://www.npmjs.com/package/inquirer), axios, and 
 
 [![Readme file demo](./assets/readme-video.gif)](https://drive.google.com/file/d/1qCbyxHFyZwjaTVLW84EwQcrsp5_eR3VH/viewC)
 
--[Click me for video](https://drive.google.com/file/d/1qCbyxHFyZwjaTVLW84EwQcrsp5_eR3VH/view)
+Or [Click me for video](https://drive.google.com/file/d/1qCbyxHFyZwjaTVLW84EwQcrsp5_eR3VH/view)
 
 ## License
 
