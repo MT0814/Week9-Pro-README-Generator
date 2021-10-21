@@ -1,4 +1,4 @@
-# README file Generator
+# README File Generator: Node.js
 [![License: MIT License](https://img.shields.io/badge/License-MIT%20License-yellow.svg)](https://www.gnu.org/licenses/MIT%20License)
 ## Table of Content 
 * [Description](#description)   
@@ -7,20 +7,19 @@
 * [License](#license) 
 * [Contributing](#contributing) 
 * [Tests](#tests) 
-* [Username](#username) 
 * [Questions](#questions)
 
 ## Description
-This is a command-line application to generate README.md file with Node.js 
+This is a command-line app that runs with Node.js that dymically generates a README.md file based on input about your project.
 ## Installation
-run npm install
+Run npm install, inquirer will prompt you for your inputs from teh command line. Use axio to fetch your info from GitHub API. 
 ## Usage
-input your information about this project and GitHub and then it will generate a README.md file.
+Help developer to generate README file effectively.
 ## License [![License: MIT License](https://img.shields.io/badge/License-MIT%20License-yellow.svg)](https://www.gnu.org/licenses/MIT%20License)
 ## Contributing
 Millie Tsai
 ## Tests
-run node index to see if any bugs
+Run it with node.js to see if any bugs.
 ## Questions
 
 Please contact me with any questions.
