@@ -1,6 +1,6 @@
 # 09 Node.js Homework: Professional README Generator
 
-[![License: MIT License](https://img.shields.io/badge/License-MIT%20License-yellow.svg)](https://www.gnu.org/licenses/MIT%20License)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Content
 
@@ -67,7 +67,7 @@ Uses the [Inquirer package](https://www.npmjs.com/package/inquirer), axios, and 
 
 ## License
 
-[![License: MIT License](https://img.shields.io/badge/License-MIT%20License-yellow.svg)](https://www.gnu.org/licenses/MIT%20License)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributing
 
